@@ -1,5 +1,6 @@
 package com.banking.project.testCases;
 
+import com.banking.project.pageObjects.Resgistration;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 

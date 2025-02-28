@@ -9,7 +9,8 @@ public class loginPage {
 
 	WebDriver ldriver;
 
-	public loginPage(WebDriver rdriver) {
+	public loginPage(WebDriver rdriver) //it is a constructor
+	{
 		
 		ldriver = rdriver;
 		PageFactory.initElements(rdriver, this);

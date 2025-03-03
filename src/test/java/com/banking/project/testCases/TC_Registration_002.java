@@ -29,11 +29,11 @@ public class TC_Registration_002 extends BaseClass {
         Thread.sleep(3000);
         rp.sbtn();
         Thread.sleep(3000);
-      // WebElement username= driver.findElement(By.xpath("//table//tbody//tr[4]//td[2]"));
+
 
         rp.uname();
         Thread.sleep(3000);
-      //  WebElement pwd=driver.findElement(By.xpath("//table//tbody//tr[5]//td[2]"));
+
 
         rp.pass();
         Thread.sleep(3000);

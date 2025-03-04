@@ -1,5 +1,6 @@
 package com.banking.project.testCases;
 
+import com.banking.project.pageObjects.NewCustomerLink;
 import com.banking.project.pageObjects.Resgistration;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -16,10 +17,10 @@ public class TC_LoginTest_001 extends BaseClass {
 		logger.info("url is opened");
 		driver.manage().window().maximize();
 		loginPage lp= new loginPage(driver);
-		lp.setUsername(username);
+		lp.setUsername(busername);
 		logger.info("Entered username");
 		
-		lp.setPwd(password);
+		lp.setPwd(bpassword);
 		logger.info("Entered password");
 		
 		lp.login();
@@ -38,5 +39,9 @@ public class TC_LoginTest_001 extends BaseClass {
 		}
 		
 		Thread.sleep(3000);
+		NewCustomerLink ncl= new NewCustomerLink(driver);
+		ncl.ClickonNewCustLink();
+		logger.info("Clicked on new customer link");
+
 	}
 }

@@ -11,15 +11,22 @@ import org.testng.annotations.BeforeClass;
 public class BaseClass {
 
 	public String baseUrl="https://demo.guru99.com/V1/index.php";
-	public String username="mngr613120";
-	public String password="enagYdy";
+	public String busername="mngr613120";
+	public String bpassword="enagYdy";
+	public String addCustPage="https://demo.guru99.com/V1/html/addcustomerpage.php";
 
-	
+
+
+	public String customerId ="391410";
 	public static WebDriver driver;
 	public static Logger logger;
 
 	public JavascriptExecutor js;
 
+	public void setCustomerId(String customerId) {
+		this.customerId = customerId;
+		System.out.println(this.customerId);
+	}
 	@BeforeClass
 	public void setUp()
 	{

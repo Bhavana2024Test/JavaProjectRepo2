@@ -28,6 +28,11 @@ public class AddTariffPlanToCustomer {
     @FindBy(xpath = "//section[@id='main']//div//p//font")
     WebElement status;
 
+    @FindBy(xpath = "//section[@id='main']/div[1]/h2[1]")
+    WebElement congMsg;
+
+    @FindBy(xpath = "//section[@id='main']//ul//li[1]//a")
+    WebElement homePageBtn;
 
     public void tariffPlanToCustlink()
     {
@@ -46,4 +51,13 @@ public class AddTariffPlanToCustomer {
       return  status.getText();
     }
 
+    public String congMsgOnPage()
+    {
+        return congMsg.getText();
+    }
+
+    public void HomePageBtnLink()
+    {
+        homePageBtn.click();
+    }
 }

@@ -20,10 +20,7 @@ public class TC_TeleComAddNewTarifPlan extends BaseClass {
         driver.manage().window().maximize();
         TelecomLink tl= new TelecomLink(driver);
         tl.linktoTelecom();
-
         tl.Menu();
-
-
         AddNewTariffPlan ntp= new AddNewTariffPlan(driver);
         ntp.TariffPlanLink();
 

@@ -24,17 +24,17 @@ public class TC_TeleComAddNewTarifPlan extends BaseClass {
         AddNewTariffPlan ntp= new AddNewTariffPlan(driver);
         ntp.TariffPlanLink();
 
-        ntp.setMonthlyRental("500");
+        ntp.setMonthlyRental("1000");
 
-        ntp.setFreeLocaMinus("345");
+        ntp.setFreeLocaMinus("300");
 
-        ntp.setFreeIntMinus("300");
+        ntp.setFreeIntMinus("200");
 
         ntp.setFreeSMSPck("100");
 
-        ntp.setLocalPerMinCharge("2");
+        ntp.setLocalPerMinCharge("1");
 
-        ntp.setInternationalPerMinCharges("4");
+        ntp.setInternationalPerMinCharges("2");
 
         ntp.setSMSPerCharges("1");
 

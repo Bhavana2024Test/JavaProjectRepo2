@@ -1,5 +1,6 @@
 package com.banking.project.baseUtilities;
 
+import com.banking.project.utilities.ReadConfig;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.JavascriptExecutor;
@@ -10,9 +11,10 @@ import org.testng.annotations.BeforeClass;
 
 public class BaseClass {
 
-	public String baseUrl="https://demo.guru99.com/V1/index.php";
-	public String busername="mngr613120";
-	public String bpassword="enagYdy";
+	ReadConfig rdc= new ReadConfig();
+	public String baseUrl=rdc.getApplicationURL();
+	public String busername=rdc.getUsername();
+	public String bpassword=rdc.getPassword();
 	public String addCustPage="https://demo.guru99.com/V1/html/addcustomerpage.php";
 
 

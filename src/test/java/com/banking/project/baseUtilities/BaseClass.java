@@ -6,8 +6,11 @@ import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Parameters;
 
 public class BaseClass {
 
@@ -29,11 +32,13 @@ public class BaseClass {
 		this.customerId = customerId;
 		System.out.println(this.customerId);
 	}
+
+
 	@BeforeClass
+	//@Parameters("browser")
 	public void setUp()
 	{
 		driver= new ChromeDriver();
-
 		logger = Logger.getLogger("eBanking");
 		PropertyConfigurator.configure("Log4j.properties");
 		js=(JavascriptExecutor) driver;

@@ -13,6 +13,7 @@ public class TC_LoginTest_001 extends BaseClass {
 	@Test
 	public void loginTest() throws InterruptedException
 	{
+
 		driver.get(baseUrl);
 		logger.info("url is opened");
 		driver.manage().window().maximize();

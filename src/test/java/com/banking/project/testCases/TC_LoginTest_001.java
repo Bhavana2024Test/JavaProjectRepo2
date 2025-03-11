@@ -2,6 +2,8 @@ package com.banking.project.testCases;
 
 import com.banking.project.pageObjects.NewCustomerLink;
 import com.banking.project.pageObjects.Resgistration;
+import com.banking.project.pageObjects.TelecomLink;
+import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -10,11 +12,11 @@ import com.banking.project.pageObjects.loginPage;
 
 public class TC_LoginTest_001 extends BaseClass {
 
-	@Test
+	@Test(priority = 0)
 	public void loginTest() throws InterruptedException
 	{
 
-		//driver.get(baseUrl);
+		driver.get(baseUrl);
 		logger.info("url is opened");
 		driver.manage().window().maximize();
 
@@ -45,6 +47,21 @@ public class TC_LoginTest_001 extends BaseClass {
 		NewCustomerLink ncl= new NewCustomerLink(driver);
 		ncl.ClickonNewCustLink();
 		logger.info("Clicked on new customer link");
+
+	}
+	@Test(priority = 1)//failed testcase
+	public void account() throws InterruptedException
+	{
+		driver.manage().window().maximize();
+		driver.findElement(By.linkText("Telecom Project1"));
+		Thread.sleep(3000);;
+
+
+
+	}
+	@Test(priority = 2 , dependsOnMethods = "account")//skipped testcase
+	public void ForgetPwd()
+	{
 
 	}
 }

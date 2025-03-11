@@ -1,12 +1,15 @@
 package com.banking.project.testCases;
 
 import com.banking.project.baseUtilities.BaseClass;
+import com.banking.project.pageObjects.Resgistration;
 import com.banking.project.pageObjects.TelecomLink;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
+@Listeners(com.banking.project.Listners.TestListner.class)
 public class TC_TeleCom001 extends BaseClass {
 
     @Test
@@ -51,4 +54,7 @@ public class TC_TeleCom001 extends BaseClass {
        driver.findElement(By.xpath("//div[@class='table-wrapper']//ul//li//a")).click();
 
     }
+
+
+
 }

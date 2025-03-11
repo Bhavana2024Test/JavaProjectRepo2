@@ -2,6 +2,9 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
 <suite name="InetBankingV1">
+    <listeners>
+        <listener class-name="com.banking.project.Listners.TestListner"></listener>
+    </listeners>
     <test name="Banking Test">
         <parameter name="browser" value="chrome"/>
         <classes>

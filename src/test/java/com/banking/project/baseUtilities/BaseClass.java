@@ -35,15 +35,16 @@ public class BaseClass {
 
 
 	@BeforeClass
-	@Parameters("browser")
-	public void setUp(String br)
+	//@Parameters("browser")
+	public void setUp()
 	{
-		//driver= new ChromeDriver();
+		driver= new ChromeDriver();
+		js=(JavascriptExecutor) driver;
 		logger = Logger.getLogger("eBanking");
 		PropertyConfigurator.configure("Log4j.properties");
 
 
-		if(br.equals("chrome"))
+		/*if(br.equals("chrome"))
 		{
 			driver= new ChromeDriver();
 		}
@@ -51,8 +52,8 @@ public class BaseClass {
 		{
 			driver = new EdgeDriver();
 		}
-		driver.get(baseUrl);
-		js=(JavascriptExecutor) driver;
+		driver.get(baseUrl);*/
+
 	}
 	
 	@AfterClass

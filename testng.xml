@@ -6,6 +6,7 @@
         <parameter name="browser" value="chrome"/>
         <classes>
             <class name="com.banking.project.testCases.TC_LoginTest_001"/>
+            <class name="com.banking.project.testCases.TC_Registration_002"/>
         </classes>
 
     </test>

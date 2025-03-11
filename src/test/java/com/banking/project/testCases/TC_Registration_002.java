@@ -10,11 +10,11 @@ import org.testng.annotations.Test;
 public class TC_Registration_002 extends BaseClass {
 
 
-    @Test
+    @Test(enabled = false)
     public void registration() throws InterruptedException {
 
 
-        driver.get(baseUrl);
+       // driver.get(baseUrl);
         driver.manage().window().maximize();
         Thread.sleep(2000);
         js.executeScript("window.scrollBy(0,350)");

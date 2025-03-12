@@ -7,33 +7,29 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
+import java.time.Duration;
+
 public class TC_Registration_002 extends BaseClass {
 
 
     @Test
     public void registration() throws InterruptedException {
 
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3000));
 
         driver.get(baseUrl);
         driver.manage().window().maximize();
-        Thread.sleep(2000);
-        js.executeScript("window.scrollBy(0,350)");
-        Thread.sleep(3000);
-        //driver.findElement(By.linkText("here")).click();
 
+        js.executeScript("window.scrollBy(0,350)");
 
         Resgistration rp= new Resgistration(driver);
         rp.hereLink();
-        Thread.sleep(3000);
-        rp.setEmail("demo2024@gmail.com");
-        Thread.sleep(3000);
-        rp.sbtn();
-        Thread.sleep(3000);
 
+        rp.setEmail("demo2024@gmail.com");
+
+        rp.sbtn();
 
         rp.uname();
-        Thread.sleep(3000);
-
 
         rp.pass();
         Thread.sleep(3000);

@@ -32,7 +32,7 @@ public class DetailedTestListner implements ITestListener {
 
         sparkReporter.config().setDocumentTitle("Automation report");
         sparkReporter.config().setReportName("Functional Testing");
-        sparkReporter.config().setTheme(Theme.STANDARD);
+        sparkReporter.config().setTheme(Theme.DARK);
         // sparkReporter.config().setTimeStampFormat("EEEE, MM dd, yyyy, hh:mm a '('zzz')'");
 
         extent= new ExtentReports();

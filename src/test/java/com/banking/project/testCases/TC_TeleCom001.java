@@ -9,45 +9,43 @@ import org.openqa.selenium.WebElement;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
+import java.time.Duration;
+
 @Listeners(com.banking.project.Listners.TestListner.class)
 public class TC_TeleCom001 extends BaseClass {
 
     @Test
     public void telecom() throws InterruptedException {
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3000));
         driver.get(baseUrl);
         driver.manage().window().maximize();
         TelecomLink tl= new TelecomLink(driver);
         tl.linktoTelecom();
-        Thread.sleep(3000);
-
 
         tl.Menu();
-
-        Thread.sleep(3000);
 
         tl.AddCust();
 
         js.executeScript("window.scrollBy(0,350)");
-        Thread.sleep(3000);
+
         tl.setBgcheckDone();
 
 
-        Thread.sleep(3000);
         tl.setFname("John");
-        Thread.sleep(3000);
+
         tl.setLName("frazer");
-        Thread.sleep(3000);
+
         tl.setEmail("Johnf@getnada.com");
-        Thread.sleep(3000);
+
        tl.setMessage("John is added");
 
-        Thread.sleep(3000);
+
         tl.setTelephone("9089785654");
        // js.executeScript("window.scrollBy(0,350)");
-        Thread.sleep(3000);
+
         tl.ClickOnSubmit();
 
-        Thread.sleep(3000);
+
     setCustomerId(tl.getCustId());
 
         Thread.sleep(3000);

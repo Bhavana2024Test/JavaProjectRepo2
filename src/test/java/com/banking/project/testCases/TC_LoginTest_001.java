@@ -10,12 +10,14 @@ import org.testng.annotations.Test;
 import com.banking.project.baseUtilities.BaseClass;
 import com.banking.project.pageObjects.loginPage;
 
+import java.time.Duration;
+
 public class TC_LoginTest_001 extends BaseClass {
 
 	@Test(priority = 0)
 	public void loginTest() throws InterruptedException
 	{
-
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3000));
 		driver.get(baseUrl);
 		logger.info("url is opened");
 		driver.manage().window().maximize();

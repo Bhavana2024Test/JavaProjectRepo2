@@ -3,7 +3,10 @@ package com.banking.project.baseUtilities;
 import com.banking.project.utilities.ReadConfig;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
+import org.apache.poi.ss.formula.functions.T;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -11,6 +14,11 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
+
+import java.io.File;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class BaseClass {
 
@@ -61,4 +69,21 @@ public class BaseClass {
 	{
 		driver.quit();
 	}
+
+	public String captureScreen(String tname) throws IOException
+	{
+		String timeStamp = new SimpleDateFormat("yyyy.MM.dd.hh.mm.ss").format(new Date());
+
+		TakesScreenshot takesScreenshot=(TakesScreenshot) driver;
+		File sourceFile= takesScreenshot.getScreenshotAs(OutputType.FILE);
+
+		String targetFilePath =System.getProperty("user.dir")+"\\Screenshots\\"+tname+"_"+timeStamp+".png";
+		File targetFile= new File(targetFilePath);
+
+		sourceFile.renameTo(targetFile);
+
+		return  targetFilePath;
+
+	}
+
 }

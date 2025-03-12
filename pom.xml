@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>SDET_Hybrid_Banking_Proj_B1</groupId>
-  <artifactId>SDET_Hybrid_Banking_Proj_B1</artifactId>
+  <artifactId>Hybrid_Proj_B1</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
 

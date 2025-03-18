@@ -8,9 +8,12 @@
     <test name="Banking Test">
         <parameter name="browser" value="chrome"/>
         <classes>
-            <class name="com.banking.project.testCases.TC_LoginTest_001"/>
-            <class name="com.banking.project.testCases.TC_Registration_002"/>
-        </classes>
+        <!--    <class name="com.banking.project.testCases.TC_LoginTest_001"/>
+            <class name="com.banking.project.testCases.TC_Registration_002"/> -->
+            
+            <class name="com.banking.project.testCases.letCodeTestcases.TC_Alert"></class>
+        </classes>  
+        
 
     </test>
 
